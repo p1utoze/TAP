@@ -13,6 +13,9 @@ TAP is a Two-Way AI Recruitment Platform AI-powered platform designed to solve t
 
 # System Architecture
 
+
+<a href="https://imgbb.com/"><img align='right' width='450' height='550' src="https://i.ibb.co/cDTXfxw/SAPCase-Study-drawio.png" alt="SAPCase-Study-drawio" border="0"></a>
+
 ### Student side: 
 - Candidate asked for inputs like: salary, work-location, resume/CV, etc and quick assessment for the domain he/she selects.
 - The personalized AI shows the percentage match in various domains in the job market and its statistical visualization.
@@ -26,15 +29,33 @@ TAP is a Two-Way AI Recruitment Platform AI-powered platform designed to solve t
 - An AI bot assisted Talent pipeline customised for the recruiter with tools like Referral Analysis, marketing automation on social media platforms, inter-bot word of mouth communication.
 - The AI bot uses recommendation system and advanced filtering algorithms to match with the Student AI bot profile.
 - Requirement-to-Skill match visualization for enhanced analysis. 
-
-
-![alt text](https://github.com/p1utoze/TAP/blob/main/static/SAPCaseStudy.drawio.png?raw=true)
-
+<br>
 
 ### Process
-* For job seeker: Firstly, Input the CV and then it will be processed by OCR. After that, the CV and job posts will undergo NLP process. And then both CV and job post will be compared by varies methods to find the similarity. Lastly, the system will list out recomendation of jobs.
 
-* For recruiter: Firstly, Input the job post and it will undergo NLP process along with CV in database. And then both CV and job post will be compared by varies methods to find the similarity. Lastly, the system will list out recomendation of candidates.
+<img align='left' width='700' height='400' src='https://user-images.githubusercontent.com/80112729/128816859-87e061da-b9e1-4880-ba1a-6e38122ff412.png'>
+
+ * **For job seeker**: Firstly, Input the CV and then it will be processed by OCR. After that, the CV and job posts will undergo NLP process. And then both CV and job post will be compared by varies methods to find the similarity. Lastly, the system will list out recomendation of jobs.
+
+  * **For recruiter**: Firstly, Input the job post and it will undergo NLP process along with CV in database. And then both CV and job post will be compared by varies methods to find the similarity. Lastly, the system will list out recomendation of candidates.
+ 
+<br>
+<hr>
+
+# Technologies Used:
+
+- Web scrapping
+- Natural Language Processing
+- Optical Character Recognition
+- Recommendation System
 
 
-<img align='left' width='800' height='500' src='https://user-images.githubusercontent.com/80112729/128816859-87e061da-b9e1-4880-ba1a-6e38122ff412.png'>
+# Navigation:
+
+- The web scrapping script for collecting datasets is written in a python file: `scrapper.py`. A CLI interface is also available> Refer to the documentation for more details: [Job resume scrapper](https://github.com/p1utoze/Resume_scrapper)
+
+Libraries & Frameworks:
+
+
+
+
