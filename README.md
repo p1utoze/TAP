@@ -68,8 +68,14 @@ Libraries & Frameworks:
 - spaCy
 
 # Progress:
-* Currently the datasets have been scrapped
-
+* Currently the datasets have been scrapped.
+* Data pre-processing done
+* nlp using spacy and vectorizaation of tokens 
+* Prepared data for training with TF-IDF Vectorizer, CountVectorizer
+* Trained on different estimators for Content-Based Recommender System: Naive Bayes, Knn, SVM all patched with intel sklearn library.
+* Performed K means clustering for collaborative filtering
+* Checking accuracy scores with Cosine similarity, jaccard and Pearson score
+* Predicting Results based on matching job category recommendation scores and candidate recommendation scores
 
 
 
