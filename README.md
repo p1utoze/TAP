@@ -77,7 +77,8 @@ Libraries & Frameworks:
 * Run on [Intel OneAPI devcloud](https://devcloud.intel.com/oneapi/get_started/) for optimising models and testing compatibility.
 * Checking accuracy scores with Cosine similarity, jaccard and Pearson score
 * Predicting Results based on matching job category recommendation scores and candidate recommendation scores
-
+<img align='center' width='700' height='400' src='https://github.com/p1utoze/TAP/blob/main/static/128826802-9368a2e6-c14b-4645-a213-56b8041a65ab.png'>
+<img align='center' width='700' height='400' src='https://github.com/p1utoze/TAP/blob/main/static/128827831-e5ae55cd-394d-4ac5-8522-95bdf8a5bb8a.png'>
 
 # Work to be done:
 
