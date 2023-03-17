@@ -52,9 +52,23 @@ TAP is a Two-Way AI Recruitment Platform AI-powered platform designed to solve t
 
 # Navigation:
 
-- The web scrapping script for collecting datasets is written in a python file: `scrapper.py`. A CLI interface is also available> Refer to the documentation for more details: [Job resume scrapper](https://github.com/p1utoze/Resume_scrapper)
+- The web scrapping script for collecting datasets is written in a python file: `scrapper.py`. A CLI interface is also available> Refer to the documentation for more details: [Job resume scrapper](https://github.com/p1utoze/Resume_scrapper).
+- The Resume and job requirement data processing files is in [preprocess](https://github.com/p1utoze/TAP/tree/main/preprocess) folder.
+- All the final datasets are in [data](https://github.com/p1utoze/TAP/tree/main/data)
+- The demo recommendation and the main model are jupyter notebooks in [models](https://github.com/p1utoze/TAP/tree/main/models)
 
+# WORKING
 Libraries & Frameworks:
+- OneDAL (daal4py python API)
+- BeautifulSoup
+- sklearnex
+- pandas 
+- requests
+- kneed
+- spaCy
+
+# Progress:
+* Currently the datasets have been scrapped
 
 
 
