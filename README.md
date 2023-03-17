@@ -57,7 +57,6 @@ TAP is a Two-Way AI Recruitment Platform AI-powered platform designed to solve t
 - All the final datasets are in [data](https://github.com/p1utoze/TAP/tree/main/data)
 - The demo recommendation and the main model are jupyter notebooks in [models](https://github.com/p1utoze/TAP/tree/main/models)
 
-# WORKING
 Libraries & Frameworks:
 - OneDAL (daal4py python API)
 - BeautifulSoup
@@ -67,15 +66,24 @@ Libraries & Frameworks:
 - kneed
 - spaCy
 
-# Progress:
+# Prototype Progress:
+
 * Currently the datasets have been scrapped.
 * Data pre-processing done
 * nlp using spacy and vectorizaation of tokens 
 * Prepared data for training with TF-IDF Vectorizer, CountVectorizer
 * Trained on different estimators for Content-Based Recommender System: Naive Bayes, Knn, SVM all patched with intel sklearn library.
 * Performed K means clustering for collaborative filtering
+* Run on [Intel OneAPI devcloud](https://devcloud.intel.com/oneapi/get_started/) for optimising models and testing compatibility.
 * Checking accuracy scores with Cosine similarity, jaccard and Pearson score
 * Predicting Results based on matching job category recommendation scores and candidate recommendation scores
 
 
+# Work to be done:
+
+* Improvise and tune models.
+* Create a web app for taking user input based on entry surveys
+* Text generation of job requirement post.
+* Category match dashboard visualization
+* Advanced nlp techniques for better NER.
 
