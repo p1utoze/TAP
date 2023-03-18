@@ -1,4 +1,4 @@
-from scrape import scrape
+from preprocess.scrape import scrape
 import argparse, pandas as pd
 parser = argparse.ArgumentParser(prog='scraper',
                                  description='A script to scrape Resumes of various domains'
@@ -18,13 +18,13 @@ if args.domain:
     print(f'Extracting resumes in domain: {args.domain}\n......')
     d = scrape(args.domain)
     df = pd.DataFrame.from_dict(d, orient='index').T
-    df.to_csv(f"resume_data_{args.domain}")
+    df.to_csv(f"scraped_data/resume_data_{args.domain}")
 
 elif args.category:
     print(f'Extracting resumes in category: {args.category}\n......')
     d = scrape(category=True, cat_no=args.category)
     df = pd.DataFrame.from_dict(d, orient='index').T
-    df.to_csv(f"resume_data_category_{args.category}")
+    df.to_csv(f"scraped_data/resume_data_category_{args.category}")
 
 else:
     print(parser.description)

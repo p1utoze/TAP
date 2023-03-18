@@ -76,4 +76,5 @@ def scrape(search='engineer', category=False, cat_no=None):
     print(f"Total features: {d.keys()}\nTotal Resumes Extracted: {d['SpiderID'].__len__()}\nTotal time: {end/60.0} min")
     return d
 
-# d = scrape(')
+
+# d = scrape()
