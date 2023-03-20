@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 7%;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        textarea{
+            border-radius: 10px;
+            border: 0;
+            padding: 2%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        button{
+            background-color: rgb(9, 102, 71);
+            color: white;
+            border-radius: 10px;
+            border: 0;
+            padding: 1%;
+            width: 7%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        h1{
+            padding: 3%;
+            text-align: center;
+            display: block;
+            width: 10%;
+            padding-left: 82%;
+        }
+
+        .function-section{
+            margin-top: 12%;
+            text-align: right;
+        }
+
+        input::file-selector-button {
+            font-weight: bold;
+            padding: 5%;
+            border-radius: 3px;
+            border: 0px;
+        }
+
+        .content{
+            width: 40%;
+            position: absolute;
+            top: 0;
+            margin-top: 13%;
+            font-size: 1.2rem;
+        }
+        img{
+            display: inline;
+            position: absolute;
+            top:0;
+            margin-left: -6%;
+        }
+        .title{
+            text-align: left;
+            margin-top: -10%;
+            margin-bottom: 8%;
+            margin-left: -25%;
+            font-size: 5rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="function-section">
+        <h1>Screener</h1>
+        <input type="file" id="inpFile">
+        <button type="button" id="btnUpload">Upload</button>
+        <br>
+        <br>
+        <textarea style="width: 300px; height: 30px;" id="resultText" placeholder="Suitable Job For Your Resume"></textarea>
+    </div>
+    <img src="logo.png" alt="">
+    <div class="content">
+        <h1 class="title">TAP</h1>
+        <p>
+            TAP is a two way recommendation platform that helps students and recruiters find each other quickly and efficiently. It uses resume parsing and AI to match students to recruiters, and vice versa. TAP reduces clutter and provides a better solution for both parties.
+        <p>
+            TAP is an AI-powered platform that helps students find the right job and recruiters find the right candidate. It helps both parties save time and get the most out of their search. With TAP, they can find the perfect match quickly and with ease.
+        </p>
+    </div>
+    <script>
+        const inpFile = document.getElementById("inpFile");
+        const btnUpload = document.getElementById("btnUpload");
+        const resultText = document.getElementById("resultText");
+
+        btnUpload.addEventListener("click", () => {
+            const formData = new FormData();
+
+            formData.append("pdfFile", inpFile.files[0]);
+
+            fetch("/extract-text", {
+                method: "post",
+                body: formData
+            }).then(response => {
+                return response.text();
+            }).then(extractedText => {
+                resultText.value = extractedText.trim();
+            });
+        });
+    </script>
+</body>
+</html>
